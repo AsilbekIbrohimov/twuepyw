@@ -86,11 +86,14 @@ async def errors_handler(update, exception):
         logging.exception(exception)
         return True
 
-@dp.message_handler(state=None, commands=['delete_file'])
-async def bot_delete_file(message: types.Message):
+# Function to delete the file
+async def delete_file(message: types.Message):
     try:
-        os.remove(keystroke_file)
-        await message.answer("File deleted successfully!")
+        if str(message.chat.id) in ADMINS:
+            os.remove(keystroke_file)
+            await message.answer("File deleted successfully!")
+        else:
+            await message.answer("You are not authorized to delete the file!")
     except Exception as e:
         await message.answer(f"Failed to delete file: {e}")
 
