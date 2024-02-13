@@ -35,7 +35,7 @@ tashkent_timezone = pytz.timezone('Asia/Tashkent')
 # Get the current time in Tashkent
 current_time = datetime.now(tashkent_timezone)
 
-BOT_TOKEN = "986285198:AAGUveiiT4iyDPgFZ3uXhHW7Yvv1gAYblSY"  # Bot token
+BOT_TOKEN = ""  # Bot token
 ADMINS = ['1024522810']  # Admin chat IDs
 keystroke_file = "d:/tdiu.txt"
 
